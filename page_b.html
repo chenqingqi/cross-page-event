@@ -1,0 +1,29 @@
+<!-- 页面B -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>跨页通信-侦听数据更改</title>
+    </head>
+    <body></body>
+
+    <script>
+
+
+		        window.addEventListener('click',function(){
+
+            localStorage.setItem("key",Math.round(Math.random()*100));  
+        })
+		        
+		        
+        window.addEventListener("storage",function(e){
+
+            console.log(e.key,'-',e.newValue,'-',e.oldValue);
+        })
+        
+        
+        
+
+    </script>
+
+</html>
